@@ -1,56 +1,62 @@
-# Welcome to your Expo app 👋
+# TRUST OS — UPI Fraud Detection Platform
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**A real-time fraud detection system built on top of UPI payments, designed for India's 500M+ users across all literacy levels and geographies.**
 
-## Get started
+🔗 **Live Demo:** https://phenomenal-sprite-dbfc9d.netlify.app/
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## What it does
 
-2. Start the app
+TRUST OS silently monitors UPI transactions and intercepts fraud before money leaves the account — with zero added latency to the UPI rail.
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## Modules
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+**BehaviorCore** — Scores user behavior silently on-device. Detects hesitation, unusual typing speed, and session anomalies.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+**ScamRadar** — Detects social engineering signals in real time. Flags active phone calls during transactions, copy-pasted amounts, round numbers, and new high-value payees.
 
-## Get a fresh project
+**MuleShield** — Pre-computed VPA trust scoring via instant database lookup. Blocks known mule accounts before NPCI settlement.
 
-When you're ready, run:
+**VulnGuard** — Vulnerability profiling for rural and first-time users. Delivers warnings in Hindi, Telugu, and other vernacular languages with simple Yes/No UI — the only fraud system designed for India's Tier-2/3 demographic.
+
+**TrustMesh** *(Architecture)* — Designed inter-bank pseudonymised fraud signal sharing via NPCI's Kafka infrastructure. Pending RBI regulatory framework.
+
+---
+
+## Tech Stack
+
+React Native (Expo) · FastAPI · Redis · scikit-learn
+
+---
+
+## Get Started
 
 ```bash
-npm run reset-project
+npm install
+npx expo start --web
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Or just open the live demo directly — no setup needed.
 
-### Other setup steps
+---
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+## India Scale
 
-## Learn more
+All detection runs client-side or via pre-computed lookups. Zero latency added to UPI's 5,000+ TPS rail. Designed to handle 1 billion users without architectural changes.
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Future Improvements
 
-## Join the community
+- **ESP32 Panic Button** — One press freezes UPI account and alerts a registered family member via SMS
+- **BC Agent Traffic Light** — Physical LED indicator at Banking Correspondent desks showing real-time transaction risk
+- **TrustMesh** — Full inter-bank fraud signal network pending RBI regulatory framework
 
-Join our community of developers creating universal apps.
+---
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Inspiration
+
+Built for India's 500M Tier-2/3 UPI users who receive fraud warnings in English they cannot read. TRUST OS speaks their language.
